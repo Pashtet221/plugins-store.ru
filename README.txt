@@ -34,3 +34,27 @@ Plugins Store V3 — тема WordPress
   В кабинете отображается последнее обращение. Ответ можно указать в
   произвольном поле psv3_reply административной записи.
 - Каталог принимает заявки. Встроенной корзины или онлайн-оплаты нет.
+
+Codex WordPress Bridge
+- Упакуйте папку plugins/store-ru-wordpress-bridge в ZIP и установите через
+  «Плагины → Добавить новый → Загрузить плагин». После активации диагностика
+  доступна в «Инструменты → Store.ru WordPress Bridge».
+- Для health, site, schema, работы со страницами, медиа, ACF, SEO, ссылками
+  и скриншотами отдельно установите серверный Codex WordPress Bridge 0.8.x.
+  Клиент в этом репозитории обращается к его REST API; наличие ACF, SEO и
+  инфраструктуры скриншотов зависит от конфигурации сайта.
+- Для команд elementor-get и elementor-update активируйте Elementor и сохраните
+  нужную страницу в его редакторе. Для чтения нужны права редактировать эту
+  страницу, для записи нужны также права администрирования.
+- Включите красивые постоянные ссылки. Создайте пароль приложения в профиле
+  WordPress. Задайте WORDPRESS_URL (HTTPS), WORDPRESS_USERNAME и
+  WORDPRESS_APP_PASSWORD в окружении либо создайте локальный
+  codex/config/.env по примеру codex/config/.env.example.
+- Выполните codex/scripts/wp help. Перед работой с основным Bridge проверьте
+  health, site и schema. Для изменения Elementor сначала выполните
+  codex/scripts/wp elementor-get ID, затем
+  codex/scripts/wp elementor-update ID payload.json. JSON содержит version
+  из ответа, element_id существующего элемента и объект settings. При HTTP
+  409 перечитайте документ. После записи перечитайте и проверьте страницу.
+- Публичные экраны темы в views/*.php редактируются в исходниках. Команды
+  Elementor работают с документами, сохранёнными в Elementor.
