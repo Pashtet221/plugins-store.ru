@@ -11,60 +11,60 @@
 <a id="n-275-259" class="layer n-275-259 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
 <a id="n-277-167" class="layer n-277-167 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
 </header>
-<div id="n-240-72" class="layer n-240-72 section" ><div id="n-240-73" class="layer n-240-73 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/97f54de6ba10a8802877dfb90b1cb5aeee4b0f21.jpeg')); ?>" alt="" style="object-fit:cover"></div>
+<div id="n-240-72" class="layer n-240-72 section home-hero" ><div id="n-240-73" class="layer n-240-73 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/97f54de6ba10a8802877dfb90b1cb5aeee4b0f21.jpeg')); ?>" alt="" style="object-fit:cover"></div>
 <div id="n-240-74" class="layer n-240-74" ><div id="n-240-75" class="layer n-240-75" ><span id="n-240-76" class="layer n-240-76 text" >WooCommerce · WordPress · 1С-Битрикс</span>
 </div>
 <h1 id="n-240-77" class="layer n-240-77 text" >Плагины для
 интернет-магазинов</h1>
 <span id="n-240-78" class="layer n-240-78 text" >Оформление заказов, доставка и интеграции.
 Готовые плагины и разработка под ваш магазин.</span>
-<div id="n-240-79" class="layer n-240-79" ><span id="n-240-80" class="layer n-240-80 text" >Найти плагин ↗</span>
-</div>
-<div id="n-240-81" class="layer n-240-81" ><span id="n-240-82" class="layer n-240-82 text" >Заказать разработку</span>
-</div>
+<a id="n-240-79" class="layer n-240-79" href="<?php echo esc_url(psv3_url('plugins')); ?>"><span id="n-240-80" class="layer n-240-80 text" >Найти плагин ↗</span>
+</a>
+<a id="n-240-81" class="layer n-240-81" href="<?php echo esc_url(psv3_url('services')); ?>"><span id="n-240-82" class="layer n-240-82 text" >Заказать разработку</span>
+</a>
 </div>
 </div>
 <div id="n-240-83" class="layer n-240-83 section image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/240_83.png')); ?>" alt="" style="object-fit:fill"></div>
-<div id="n-240-91" class="layer n-240-91 section" ><span id="n-240-92" class="layer n-240-92 text" >Готовые плагины</span>
+<div id="n-240-91" class="layer n-240-91 section home-catalog" ><span id="n-240-92" class="layer n-240-92 text" >Готовые плагины</span>
 <span id="n-240-93" class="layer n-240-93 text" >Выберите решение для своего магазина</span>
 <a id="n-240-94" class="layer n-240-94" href="<?php echo esc_url(psv3_url('plugins')); ?>"><span id="n-240-95" class="layer n-240-95 text" >Весь каталог ↗</span>
 </a>
-<div id="n-240-96" class="layer n-240-96" ><span id="n-240-97" class="layer n-240-97 text" >Все</span>
+<div id="n-240-96" class="layer n-240-96 home-catalog-category" ><span id="n-240-97" class="layer n-240-97 text" >Все</span>
 </div>
-<div id="n-240-98" class="layer n-240-98" ><a id="n-240-99" class="layer n-240-99 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WooCommerce</a>
+<div id="n-240-98" class="layer n-240-98 home-catalog-category" ><a id="n-240-99" class="layer n-240-99 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WooCommerce</a>
 </div>
-<div id="n-240-100" class="layer n-240-100" ><a id="n-240-101" class="layer n-240-101 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WordPress</a>
+<div id="n-240-100" class="layer n-240-100 home-catalog-category" ><a id="n-240-101" class="layer n-240-101 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WordPress</a>
 </div>
-<div id="n-240-102" class="layer n-240-102" ><a id="n-240-103" class="layer n-240-103 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">1С-Битрикс</a>
+<div id="n-240-102" class="layer n-240-102 home-catalog-category" ><a id="n-240-103" class="layer n-240-103 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">1С-Битрикс</a>
 </div>
-<div id="n-240-210" class="layer n-240-210" ><span id="n-I240-210-240-206" class="layer n-I240-210-240-206 text" >Подсказки адресов</span>
+<div id="n-240-210" class="layer n-240-210 home-catalog-card" ><div id="n-240-104" class="layer n-240-104 image-layer home-card-cover" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/f6941378c9ca41863718c1fff81c3f288e96fa4c.jpeg')); ?>" alt="" style="object-fit:cover"></div>
+<span id="n-I240-210-240-206" class="layer n-I240-210-240-206 text" >Подсказки адресов</span>
 <span id="n-I240-210-240-207" class="layer n-I240-210-240-207 text" >DaData WooCommerce</span>
 <span id="n-I240-210-240-208" class="layer n-I240-210-240-208 text" >Помогает покупателям быстрее заполнить адрес доставки.</span>
 <a id="n-I240-210-240-209" class="layer n-I240-210-240-209 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">О плагине ↗</a>
 <span id="n-I240-210-248-154" class="layer n-I240-210-248-154 text" >Условия покупки ↗</span>
 </div>
-<div id="n-240-104" class="layer n-240-104 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/f6941378c9ca41863718c1fff81c3f288e96fa4c.jpeg')); ?>" alt="" style="object-fit:cover"></div>
-<div id="n-240-215" class="layer n-240-215" ><span id="n-I240-215-240-206" class="layer n-I240-215-240-206 text" >Оформление заказа</span>
+<div id="n-240-215" class="layer n-240-215 home-catalog-card" ><div id="n-240-105" class="layer n-240-105 image-layer home-card-cover" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/c4133820d2ae59bca709a43333a693be8225523e.jpeg')); ?>" alt="" style="object-fit:cover"></div>
+<span id="n-I240-215-240-206" class="layer n-I240-215-240-206 text" >Оформление заказа</span>
 <span id="n-I240-215-240-207" class="layer n-I240-215-240-207 text" >Кастомный Checkout</span>
 <span id="n-I240-215-240-208" class="layer n-I240-215-240-208 text" >Настройка полей и сценария оформления заказа.</span>
 <a id="n-I240-215-240-209" class="layer n-I240-215-240-209 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">О плагине ↗</a>
 <span id="n-I240-215-248-154" class="layer n-I240-215-248-154 text" >Условия покупки ↗</span>
 </div>
-<div id="n-240-105" class="layer n-240-105 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/c4133820d2ae59bca709a43333a693be8225523e.jpeg')); ?>" alt="" style="object-fit:cover"></div>
-<div id="n-240-220" class="layer n-240-220" ><span id="n-I240-220-240-206" class="layer n-I240-220-240-206 text" >Доставка и ПВЗ</span>
+<div id="n-240-220" class="layer n-240-220 home-catalog-card" ><div id="n-240-106" class="layer n-240-106 image-layer home-card-cover" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/f95100bc992ec731a37ba64c86b2a8b65a120d26.jpeg')); ?>" alt="" style="object-fit:cover"></div>
+<span id="n-I240-220-240-206" class="layer n-I240-220-240-206 text" >Доставка и ПВЗ</span>
 <span id="n-I240-220-240-207" class="layer n-I240-220-240-207 text" >CDEK Delivery UX</span>
 <span id="n-I240-220-240-208" class="layer n-I240-220-240-208 text" >Выбор пункта выдачи при оформлении заказа.</span>
 <a id="n-I240-220-240-209" class="layer n-I240-220-240-209 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">О плагине ↗</a>
 <span id="n-I240-220-248-154" class="layer n-I240-220-248-154 text" >Условия покупки ↗</span>
 </div>
-<div id="n-240-106" class="layer n-240-106 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/f95100bc992ec731a37ba64c86b2a8b65a120d26.jpeg')); ?>" alt="" style="object-fit:cover"></div>
-<div id="n-240-225" class="layer n-240-225" ><span id="n-I240-225-240-206" class="layer n-I240-225-240-206 text" >Модуль для 1С-Битрикс</span>
+<div id="n-240-225" class="layer n-240-225 home-catalog-card" ><div id="n-240-107" class="layer n-240-107 image-layer home-card-cover" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/85d54aef0a971987b911034e86be4a1c1d069ccc.jpeg')); ?>" alt="" style="object-fit:cover"></div>
+<span id="n-I240-225-240-206" class="layer n-I240-225-240-206 text" >Модуль для 1С-Битрикс</span>
 <span id="n-I240-225-240-207" class="layer n-I240-225-240-207 text" >Брошенные корзины (PV)</span>
 <span id="n-I240-225-240-208" class="layer n-I240-225-240-208 text" >Отслеживание корзин, в которых заказ не оформили.</span>
 <a id="n-I240-225-240-209" class="layer n-I240-225-240-209 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">О плагине ↗</a>
 <span id="n-I240-225-248-154" class="layer n-I240-225-248-154 text" >Условия покупки ↗</span>
 </div>
-<div id="n-240-107" class="layer n-240-107 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/85d54aef0a971987b911034e86be4a1c1d069ccc.jpeg')); ?>" alt="" style="object-fit:cover"></div>
 </div>
 <div id="n-248-82" class="layer n-248-82 section" ><span id="n-248-83" class="layer n-248-83 text" >Условия покупки</span>
 <a id="n-248-84" class="layer n-248-84 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Все условия ↗</a>

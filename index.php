@@ -31,8 +31,22 @@ $view = psv3_view();
     </div>
 <?php endif; ?>
 </main>
-<?php foreach (['mega', 'profile-menu', 'login', 'reset', 'ticket'] as $overlay) : ?>
-    <dialog id="overlay-<?php echo esc_attr($overlay); ?>" class="ps-dialog <?php echo esc_attr('ps-dialog-' . $overlay); ?>"><?php require get_theme_file_path('/views/' . $overlay . '.php'); ?></dialog>
+<?php
+$dialog_labels = [
+    'mega' => 'Каталог плагинов',
+    'profile-menu' => 'Меню личного кабинета',
+    'login' => 'Вход в аккаунт',
+    'reset' => 'Восстановление пароля',
+    'ticket' => 'Новое обращение',
+];
+foreach ($dialog_labels as $overlay => $dialog_label) :
+?>
+    <dialog id="overlay-<?php echo esc_attr($overlay); ?>" class="ps-dialog ps-dialog-<?php echo esc_attr($overlay); ?>" aria-label="<?php echo esc_attr($dialog_label); ?>">
+        <?php if (in_array($overlay, ['mega', 'profile-menu'], true)) : ?>
+            <button class="dialog-dismiss" type="button" data-close>Закрыть ×</button>
+        <?php endif; ?>
+        <?php require get_theme_file_path('/views/' . $overlay . '.php'); ?>
+    </dialog>
 <?php endforeach; ?>
 <?php wp_footer(); ?>
 </body>

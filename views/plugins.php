@@ -35,7 +35,7 @@
 <span id="n-268-121" class="layer n-268-121 text" >↗</span>
 </button>
 </div>
-<div id="n-268-122" class="layer n-268-122 section" ><button id="n-268-123" class="layer n-268-123" data-filter="Все" aria-pressed="true" type="button"><span id="n-268-124" class="layer n-268-124 text" >Все</span>
+<div id="n-268-122" class="layer n-268-122 section catalog-filters" ><button id="n-268-123" class="layer n-268-123" data-filter="Все" aria-pressed="true" type="button"><span id="n-268-124" class="layer n-268-124 text" >Все</span>
 </button>
 <button id="n-268-125" class="layer n-268-125" data-filter="Доставка" aria-pressed="false" type="button"><span id="n-268-126" class="layer n-268-126 text" >Доставка</span>
 </button>
@@ -80,27 +80,27 @@
 <span id="n-268-164" class="layer n-268-164 text" >Отслеживание корзин, в которых заказ не оформили.</span>
 </div>
 </div>
-<div id="n-268-165" class="layer n-268-165 section" ><span id="n-268-166" class="layer n-268-166 text" >Какой плагин выбрать</span>
-<span id="n-268-167" class="layer n-268-167 text" >Плагин</span>
-<span id="n-268-168" class="layer n-268-168 text" >Платформа</span>
-<span id="n-268-169" class="layer n-268-169 text" >Задача</span>
-<div id="n-268-170" class="layer n-268-170" ><a id="n-268-171" class="layer n-268-171 text" href="<?php echo esc_url(psv3_url('ozon-delivery')); ?>">Доставка Ozon</a>
+<div id="n-268-165" class="layer n-268-165 section catalog-comparison" ><span id="n-268-166" class="layer n-268-166 text" >Какой плагин выбрать</span>
+<span id="n-268-167" class="layer n-268-167 text comparison-label" >Плагин</span>
+<span id="n-268-168" class="layer n-268-168 text comparison-label" >Платформа</span>
+<span id="n-268-169" class="layer n-268-169 text comparison-label" >Задача</span>
+<div id="n-268-170" class="layer n-268-170 comparison-row" ><a id="n-268-171" class="layer n-268-171 text" href="<?php echo esc_url(psv3_url('ozon-delivery')); ?>">Доставка Ozon</a>
 <a id="n-268-172" class="layer n-268-172 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WooCommerce</a>
 <span id="n-268-173" class="layer n-268-173 text" >Доставка через Ozon</span>
 </div>
-<div id="n-268-174" class="layer n-268-174" ><span id="n-268-175" class="layer n-268-175 text" >CDEK Delivery UX</span>
+<div id="n-268-174" class="layer n-268-174 comparison-row" ><span id="n-268-175" class="layer n-268-175 text" >CDEK Delivery UX</span>
 <a id="n-268-176" class="layer n-268-176 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WooCommerce</a>
 <span id="n-268-177" class="layer n-268-177 text" >Доставка через СДЭК</span>
 </div>
-<div id="n-268-178" class="layer n-268-178" ><a id="n-268-179" class="layer n-268-179 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">Кастомный Checkout</a>
+<div id="n-268-178" class="layer n-268-178 comparison-row" ><a id="n-268-179" class="layer n-268-179 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">Кастомный Checkout</a>
 <a id="n-268-180" class="layer n-268-180 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WooCommerce</a>
 <span id="n-268-181" class="layer n-268-181 text" >Настройка оформления заказа</span>
 </div>
-<div id="n-268-182" class="layer n-268-182" ><span id="n-268-183" class="layer n-268-183 text" >DaData WooCommerce</span>
+<div id="n-268-182" class="layer n-268-182 comparison-row" ><span id="n-268-183" class="layer n-268-183 text" >DaData WooCommerce</span>
 <a id="n-268-184" class="layer n-268-184 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WooCommerce</a>
 <span id="n-268-185" class="layer n-268-185 text" >Подсказки при вводе адреса</span>
 </div>
-<div id="n-268-186" class="layer n-268-186" ><span id="n-268-187" class="layer n-268-187 text" >Брошенные корзины (PV)</span>
+<div id="n-268-186" class="layer n-268-186 comparison-row" ><span id="n-268-187" class="layer n-268-187 text" >Брошенные корзины (PV)</span>
 <a id="n-268-188" class="layer n-268-188 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">1С-Битрикс</a>
 <span id="n-268-189" class="layer n-268-189 text" >Учёт брошенных корзин</span>
 </div>

@@ -1,21 +1,4 @@
 (() => {
-    const mobile = matchMedia('(max-width: 760px)');
-    const homeCatalog = document.getElementById('n-240-91');
-    const covers = homeCatalog ? [...homeCatalog.children]
-        .filter((item) => item.classList.contains('image-layer') && item.previousElementSibling)
-        .map((item) => ({ item, card: item.previousElementSibling })) : [];
-    const placeCovers = () => covers.forEach(({ item, card }) => {
-        if (mobile.matches) {
-            item.classList.add('mobile-card-cover');
-            card.prepend(item);
-        } else {
-            item.classList.remove('mobile-card-cover');
-            card.after(item);
-        }
-    });
-    mobile.addEventListener('change', placeCovers);
-    placeCovers();
-
     const show = (name) => {
         const dialog = document.getElementById('overlay-' + name);
         if (!dialog) return;
@@ -51,8 +34,8 @@
             });
             const shown = cards.filter((card) => !card.hidden);
             shown.forEach((card, index) => {
-                card.style.left = (index % 3) * 408 + 'px';
-                card.style.top = 59 + Math.floor(index / 3) * 371 + 'px';
+                card.style.setProperty('--catalog-left', (index % 3) * 408 + 'px');
+                card.style.setProperty('--catalog-top', 59 + Math.floor(index / 3) * 371 + 'px');
             });
             container.querySelectorAll('button[data-filter]').forEach((button) =>
                 button.setAttribute('aria-pressed', String(button.dataset.filter === selected)));
