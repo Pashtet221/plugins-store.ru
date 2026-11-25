@@ -763,3 +763,41 @@ html {
     .scene-host > .scene > .section > a.layer.service-price-card,
     .scene .service-floating-field, .service-floating-field label { transition: none; }
 }
+
+.plugin-layout { display: grid; gap: var(--post-gap); }
+.plugin-breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; color: #515d65; overflow-wrap: anywhere; }
+.plugin-breadcrumbs a { color: inherit; }
+.plugin-breadcrumbs > :not(:last-child)::after { content: ' /'; padding-inline-start: 8px; }
+.plugin-hero { display: grid; gap: 16px; padding: 16px; border-radius: 32px; background: #191d20; }
+.plugin-intro { display: grid; align-content: center; gap: 16px; padding: var(--post-padding); border-radius: 24px; background: #fff; }
+.plugin-intro h1 { margin: 0; font-size: clamp(27px, 4vw, 48px); line-height: 1.15; overflow-wrap: anywhere; }
+.plugin-summary { color: #515d65; }
+.plugin-summary p { margin: 0; }
+.plugin-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.plugin-actions a { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 16px; border-radius: 12px; color: #191d20; font-weight: 600; text-decoration: none; }
+.plugin-action-primary { background: #73e28f; }
+.plugin-action-secondary { background: #f1f4f7; }
+.plugin-cover { display: grid; place-items: center; min-width: 0; padding: 16px; border-radius: 24px; background: #253636; }
+.plugin-cover img { width: 100%; max-height: 440px; object-fit: contain; }
+.plugin-details.post-body { width: 100%; }
+.plugin-request { display: grid; gap: var(--post-gap); padding: var(--post-padding); border-radius: 28px; background: #73e28f; }
+.plugin-request h2 { margin: 0; font-size: clamp(26px, 3vw, 39px); }
+.plugin-request .plain-action { display: inline-block; text-decoration: none; }
+.plugin-request .native-form {
+    position: relative;
+    inset: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    width: auto;
+    height: auto;
+    padding: var(--post-padding);
+}
+.plugin-request .native-form > .layer { position: relative; inset: auto; width: auto; height: auto; margin: 0; padding: 0; white-space: normal; }
+.plugin-request .field { min-height: 48px; }
+.plugin-request .field textarea { min-height: 96px; }
+.plugin-request .native-form button { justify-self: start; min-height: 44px; padding: 10px 14px; }
+.plugin-request .native-form button .text { position: static; width: auto; height: auto; white-space: normal; }
+@media (width >= 900px) {
+    .plugin-hero-with-cover, .plugin-request { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); }
+}

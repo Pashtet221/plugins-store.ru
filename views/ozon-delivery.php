@@ -1,17 +1,5 @@
 <article id="n-251-86" class="scene n-251-86" ><div id="n-251-87" class="layer n-251-87 section backdrop-layer ornament" ></div>
-<header id="n-251-88" class="layer n-251-88 section site-header" ><a id="n-251-89" class="layer n-251-89 text site-brand" href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
-<button id="n-251-90" class="layer n-251-90 text" data-open="mega" type="button">Плагины</button>
-<a id="n-251-91" class="layer n-251-91 text" href="<?php echo esc_url(psv3_url('services')); ?>">Услуги</a>
-<a id="n-251-92" class="layer n-251-92 text" href="<?php echo esc_url(psv3_url('home')); ?>#n-240-134">Мини-кейсы</a>
-<a id="n-251-93" class="layer n-251-93 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Документация</a>
-<button id="n-251-94" class="layer n-251-94" data-open="profile-menu" type="button"><span id="n-251-95" class="layer n-251-95 text" >Вход в ЛК</span>
-</button>
-<div id="n-251-96" class="layer n-251-96" ><div id="n-251-97" class="layer n-251-97 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/251_97.png')); ?>" alt="" style="object-fit:fill"></div>
-</div>
-<a id="n-275-262" class="layer n-275-262 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
-<a id="n-277-170" class="layer n-277-170 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
-<?php get_template_part('views/mobile-nav-toggle'); ?>
-</header>
+<?php get_template_part('views/plugin-header'); ?>
 <span id="n-251-98" class="layer n-251-98 text section" >Главная  /  Плагины  /  Доставка Ozon</span>
 <div id="n-251-99" class="layer n-251-99 section" ><div id="n-251-100" class="layer n-251-100" ><div id="n-251-101" class="layer n-251-101" ><a id="n-251-102" class="layer n-251-102 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WooCommerce</a>
 </div>
@@ -91,18 +79,7 @@
 <span id="n-251-159" class="layer n-251-159 text" >Пришлите ссылку на магазин. Уточним совместимость, стоимость и способ подключения.</span>
 <div id="n-251-160" class="layer n-251-160" ><a id="n-251-161" class="layer n-251-161 text" href="<?php echo esc_url(psv3_telegram()); ?>">Написать в Telegram ↗</a>
 </div>
-<form id="n-251-162" class="layer n-251-162 native-form" method="post" enctype="multipart/form-data" action="<?php echo esc_url(admin_url('admin-post.php')); ?>"><?php psv3_form_fields('request'); ?><span id="n-251-163" class="layer n-251-163 text" >Имя</span>
-<div id="n-251-164" class="layer n-251-164 field" ><input type="text" name="name" aria-label="Имя" placeholder="Как к вам обращаться"></div>
-<span id="n-251-166" class="layer n-251-166 text" >Email или Telegram</span>
-<div id="n-251-167" class="layer n-251-167 field" ><input type="text" name="contact" aria-label="Email или Telegram" placeholder="Куда вам ответить" required></div>
-<span id="n-251-169" class="layer n-251-169 text" >Сайт магазина</span>
-<div id="n-251-170" class="layer n-251-170 field" ><input type="url" name="website" aria-label="Сайт магазина" placeholder="https://"></div>
-<span id="n-251-172" class="layer n-251-172 text" >Комментарий</span>
-<div id="n-251-173" class="layer n-251-173 field" ><textarea name="message" aria-label="Комментарий" placeholder="Например, нужна помощь с установкой"></textarea></div>
-<button id="n-251-175" class="layer n-251-175" type="submit"><span id="n-251-176" class="layer n-251-176 text" >Отправить заявку →</span>
-</button>
-<a id="n-251-177" class="layer n-251-177 text" href="<?php echo esc_url(psv3_url('privacy')); ?>">Политика конфиденциальности ↗</a>
-</form>
+<?php get_template_part('views/plugin-request-form'); ?>
 </div>
 <div id="n-251-178" class="layer n-251-178 section" ><span id="n-251-179" class="layer n-251-179 text" >Другие плагины WooCommerce</span>
 <div id="n-251-180" class="layer n-251-180" ><div id="n-251-181" class="layer n-251-181 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/f95100bc992ec731a37ba64c86b2a8b65a120d26.jpeg')); ?>" alt="" style="object-fit:cover"></div>
@@ -121,32 +98,5 @@
 <span id="n-251-194" class="layer n-251-194 text" >О плагине ↗</span>
 </div>
 </div>
-<footer id="n-251-195" class="layer n-251-195 section site-footer" ><div id="n-251-196" class="layer n-251-196" ><div id="n-251-197" class="layer n-251-197" ><a id="n-251-198" class="layer n-251-198 text" href="<?php echo esc_url(psv3_url('home')); ?>">plugins.store</a>
-<span id="n-251-199" class="layer n-251-199 text" >Плагины и разработка
-для интернет-магазинов</span>
-</div>
-<div id="n-251-200" class="layer n-251-200" ><a id="n-251-201" class="layer n-251-201 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">Плагины</a>
-<a id="n-251-202" class="layer n-251-202 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WooCommerce</a>
-<a id="n-251-203" class="layer n-251-203 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WordPress</a>
-<a id="n-251-204" class="layer n-251-204 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">1С-Битрикс</a>
-</div>
-<div id="n-251-205" class="layer n-251-205" ><a id="n-251-206" class="layer n-251-206 text" href="<?php echo esc_url(psv3_url('services')); ?>">Услуги</a>
-<span id="n-251-207" class="layer n-251-207 text" >Разработка плагинов</span>
-<span id="n-251-208" class="layer n-251-208 text" >Доработка магазинов</span>
-<span id="n-251-209" class="layer n-251-209 text" >Техническая поддержка</span>
-</div>
-<div id="n-251-210" class="layer n-251-210" ><span id="n-251-211" class="layer n-251-211 text" >Помощь</span>
-<a id="n-251-212" class="layer n-251-212 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Документация</a>
-<a id="n-251-213" class="layer n-251-213 text" href="<?php echo esc_url(psv3_url('account')); ?>">Личный кабинет</a>
-<a id="n-251-214" class="layer n-251-214 text" href="<?php echo esc_url(psv3_telegram()); ?>">Telegram</a>
-</div>
-</div>
-<div id="n-251-215" class="layer n-251-215 ornament" ></div>
-<div id="n-251-216" class="layer n-251-216" ><span id="n-251-217" class="layer n-251-217 text" >© Plugins-store</span>
-<div id="n-251-218" class="layer n-251-218" ><a id="n-251-219" class="layer n-251-219 text" href="<?php echo esc_url(psv3_url('privacy')); ?>">Политика конфиденциальности</a>
-<a id="n-251-220" class="layer n-251-220 text" href="<?php echo esc_url(psv3_url('offer')); ?>">Публичная оферта</a>
-<a id="n-251-221" class="layer n-251-221 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Гарантии и возврат</a>
-</div>
-</div>
-</footer>
+<?php get_template_part('views/plugin-footer'); ?>
 </article>

@@ -18,9 +18,9 @@ add_action('after_setup_theme', static function () {
     add_theme_support('automatic-feed-links');
 });
 add_action('wp_enqueue_scripts', static function () {
-    wp_enqueue_style('psv3-layout', get_theme_file_uri('/assets/theme.css'), [], '1.0.11');
-    wp_enqueue_style('psv3-geometry', get_theme_file_uri('/assets/geometry.css'), ['psv3-layout'], '1.0.11');
-    wp_enqueue_script('psv3-ui', get_theme_file_uri('/assets/theme.js'), [], '1.0.11', true);
+    wp_enqueue_style('psv3-layout', get_theme_file_uri('/assets/theme.css'), [], '1.0.12');
+    wp_enqueue_style('psv3-geometry', get_theme_file_uri('/assets/geometry.css'), ['psv3-layout'], '1.0.12');
+    wp_enqueue_script('psv3-ui', get_theme_file_uri('/assets/theme.js'), [], '1.0.12', true);
 });
 add_action('customize_register', static function ($customizer) {
     $customizer->add_section('psv3_contacts', ['title' => 'Plugins-store']);
@@ -122,6 +122,12 @@ function psv3_request(): never {
     check_admin_referer('psv3_request');
     $contact = sanitize_text_field(psv3_post('contact'));
     $body = sanitize_textarea_field(psv3_post('message'));
+    $plugin_id = absint(psv3_post('plugin_id'));
+    $plugin = $plugin_id ? get_post($plugin_id) : null;
+    $plugin_context = '';
+    if ($plugin && $plugin->post_type === 'wp-plugins' && $plugin->post_status === 'publish' && !$plugin->post_password) {
+        $plugin_context = "Плагин: " . sanitize_text_field(get_the_title($plugin)) . "\n" . get_permalink($plugin) . "\n\n";
+    }
     $name = sanitize_text_field(psv3_post('name'));
     $website = esc_url_raw(psv3_post('website'));
     if (!$contact || !$body) {
@@ -154,7 +160,7 @@ function psv3_request(): never {
         $attachments[] = $path;
     }
     try {
-        $sent = wp_mail(get_theme_mod('psv3_email') ?: get_option('admin_email'), 'Заявка Plugins-store', "Имя: $name\nКонтакт: $contact\nСайт: $website\n\n$body", [], $attachments);
+        $sent = wp_mail(get_theme_mod('psv3_email') ?: get_option('admin_email'), 'Заявка Plugins-store', "{$plugin_context}Имя: $name\nКонтакт: $contact\nСайт: $website\n\n$body", [], $attachments);
     } finally {
         foreach ($attachments as $path) {
             unlink($path);

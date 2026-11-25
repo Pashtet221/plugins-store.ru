@@ -2,6 +2,7 @@
 defined('ABSPATH') || exit;
 $view = psv3_view();
 $is_single_post = is_singular('post');
+$is_single_plugin = is_singular('wp-plugins');
 $account_requires_login = $view === 'account' && !is_user_logged_in();
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
@@ -47,7 +48,7 @@ $account_requires_login = $view === 'account' && !is_user_logged_in();
 <!-- /Yandex.Metrika counter -->
 <main id="content">
 <?php psv3_notice(); ?>
-<?php if (!$is_single_post && (!$view || $account_requires_login)) : ?>
+<?php if (!$is_single_post && !$is_single_plugin && (!$view || $account_requires_login)) : ?>
     <header class="mobile-fallback-header">
         <a href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
         <?php get_template_part('views/mobile-nav-toggle'); ?>
@@ -55,6 +56,10 @@ $account_requires_login = $view === 'account' && !is_user_logged_in();
 <?php endif; ?>
 <?php if ($account_requires_login) : ?>
     <div class="editor-content"><h1>Личный кабинет</h1><p>Войдите, чтобы открыть кабинет.</p><button type="button" class="plain-action" data-open="login">Войти</button></div>
+<?php elseif ($is_single_plugin) : ?>
+    <?php while (have_posts()) : the_post(); ?>
+        <?php get_template_part('views/single-plugin'); ?>
+    <?php endwhile; ?>
 <?php elseif ($is_single_post) : ?>
     <?php while (have_posts()) : the_post(); ?>
         <?php get_template_part('views/single-post'); ?>
