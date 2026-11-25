@@ -10,12 +10,15 @@ $account_requires_login = $view === 'account' && !is_user_logged_in();
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php
-wp_body_open();
-get_template_part('views/site-header');
-?>
+<?php wp_body_open(); ?>
 <main id="content">
 <?php psv3_notice(); ?>
+<?php if (!$view || $account_requires_login) : ?>
+    <header class="mobile-fallback-header">
+        <a href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
+        <?php get_template_part('views/mobile-nav-toggle'); ?>
+    </header>
+<?php endif; ?>
 <?php if ($account_requires_login) : ?>
     <div class="editor-content"><h1>Личный кабинет</h1><p>Войдите, чтобы открыть кабинет.</p><button type="button" class="plain-action" data-open="login">Войти</button></div>
 <?php elseif ($view) : ?>
@@ -25,6 +28,7 @@ get_template_part('views/site-header');
     <?php endif; ?>
 <?php else : ?>
     <div class="editor-content">
+        <nav class="editor-nav"><a href="<?php echo esc_url(home_url('/')); ?>">Plugins-store</a> · <a href="<?php echo esc_url(psv3_url('plugins')); ?>">Каталог</a> · <a href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a></nav>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article><h1><?php if (is_singular()) { the_title(); } else { ?><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php } ?></h1>
             <?php if (is_singular()) { the_content(); } else { the_excerpt(); } ?></article>

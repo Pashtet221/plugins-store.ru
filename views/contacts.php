@@ -1,5 +1,17 @@
 <article id="n-277-86" class="scene n-277-86" ><div id="n-277-87" class="layer n-277-87 section backdrop-layer ornament" ></div>
-
+<header id="n-277-88" class="layer n-277-88 section site-header" ><a id="n-277-89" class="layer n-277-89 text site-brand" href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
+<button id="n-277-90" class="layer n-277-90 text" data-open="mega" type="button">Плагины</button>
+<a id="n-277-91" class="layer n-277-91 text" href="<?php echo esc_url(psv3_url('services')); ?>">Услуги</a>
+<a id="n-277-92" class="layer n-277-92 text" href="<?php echo esc_url(psv3_url('home')); ?>#n-240-134">Мини-кейсы</a>
+<a id="n-277-93" class="layer n-277-93 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Документация</a>
+<button id="n-277-94" class="layer n-277-94" data-open="profile-menu" type="button"><span id="n-277-95" class="layer n-277-95 text" >Вход в ЛК</span>
+</button>
+<div id="n-277-96" class="layer n-277-96" ><div id="n-277-97" class="layer n-277-97 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/277_97.png')); ?>" alt="" style="object-fit:fill"></div>
+</div>
+<a id="n-277-98" class="layer n-277-98 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
+<a id="n-277-180" class="layer n-277-180 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
+<?php get_template_part('views/mobile-nav-toggle'); ?>
+</header>
 <a id="n-277-99" class="layer n-277-99 text section" href="<?php echo esc_url(psv3_url('home')); ?>">Главная</a>
 <span id="n-277-100" class="layer n-277-100 text section" >/  О проекте и контакты</span>
 <div id="n-277-101" class="layer n-277-101 section" ><h1 id="n-277-102" class="layer n-277-102 text" >О проекте

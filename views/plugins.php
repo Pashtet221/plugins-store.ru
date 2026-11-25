@@ -1,5 +1,17 @@
 <article id="n-268-86" class="scene n-268-86" ><div id="n-268-87" class="layer n-268-87 section backdrop-layer ornament" ></div>
-
+<header id="n-268-88" class="layer n-268-88 section site-header" ><a id="n-268-89" class="layer n-268-89 text site-brand" href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
+<button id="n-268-90" class="layer n-268-90 text" data-open="mega" type="button">Плагины</button>
+<a id="n-268-91" class="layer n-268-91 text" href="<?php echo esc_url(psv3_url('services')); ?>">Услуги</a>
+<a id="n-268-92" class="layer n-268-92 text" href="<?php echo esc_url(psv3_url('home')); ?>#n-240-134">Мини-кейсы</a>
+<a id="n-268-93" class="layer n-268-93 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Документация</a>
+<button id="n-268-94" class="layer n-268-94" data-open="profile-menu" type="button"><span id="n-268-95" class="layer n-268-95 text" >Вход в ЛК</span>
+</button>
+<div id="n-268-96" class="layer n-268-96" ><div id="n-268-97" class="layer n-268-97 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/268_97.png')); ?>" alt="" style="object-fit:fill"></div>
+</div>
+<a id="n-275-265" class="layer n-275-265 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
+<a id="n-277-173" class="layer n-277-173 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
+<?php get_template_part('views/mobile-nav-toggle'); ?>
+</header>
 <a id="n-268-98" class="layer n-268-98 text section" href="<?php echo esc_url(psv3_url('home')); ?>">Главная  /  Плагины</a>
 <div id="n-268-99" class="layer n-268-99 section catalog-intro" ><a id="n-268-100" class="layer n-268-100 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">Каталог плагинов</a>
 <span id="n-268-101" class="layer n-268-101 text" >Решения для WooCommerce и 1С-Битрикс. Выберите, что нужно доработать в вашем магазине.</span>
