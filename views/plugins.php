@@ -10,9 +10,10 @@
 </div>
 <a id="n-275-265" class="layer n-275-265 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
 <a id="n-277-173" class="layer n-277-173 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
+<?php get_template_part('views/mobile-nav-toggle'); ?>
 </header>
 <a id="n-268-98" class="layer n-268-98 text section" href="<?php echo esc_url(psv3_url('home')); ?>">Главная  /  Плагины</a>
-<div id="n-268-99" class="layer n-268-99 section" ><a id="n-268-100" class="layer n-268-100 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">Каталог плагинов</a>
+<div id="n-268-99" class="layer n-268-99 section catalog-intro" ><a id="n-268-100" class="layer n-268-100 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">Каталог плагинов</a>
 <span id="n-268-101" class="layer n-268-101 text" >Решения для WooCommerce и 1С-Битрикс. Выберите, что нужно доработать в вашем магазине.</span>
 <a id="n-268-102" class="layer n-268-102" href="#n-268-136"><span id="n-268-103" class="layer n-268-103 text" >Смотреть решения ↓</span>
 </a>

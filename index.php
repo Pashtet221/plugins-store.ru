@@ -1,6 +1,7 @@
 <?php
 defined('ABSPATH') || exit;
 $view = psv3_view();
+$account_requires_login = $view === 'account' && !is_user_logged_in();
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -12,16 +13,22 @@ $view = psv3_view();
 <?php wp_body_open(); ?>
 <main id="content">
 <?php psv3_notice(); ?>
-<?php if ($view === 'account' && !is_user_logged_in()) : ?>
+<?php if (!$view || $account_requires_login) : ?>
+    <header class="mobile-fallback-header">
+        <a href="<?php echo esc_url(psv3_url('home')); ?>">plugins.store</a>
+        <?php get_template_part('views/mobile-nav-toggle'); ?>
+    </header>
+<?php endif; ?>
+<?php if ($account_requires_login) : ?>
     <div class="editor-content"><h1>Личный кабинет</h1><p>Войдите, чтобы открыть кабинет.</p><button type="button" class="plain-action" data-open="login">Войти</button></div>
 <?php elseif ($view) : ?>
     <div class="scene-host"><?php require get_theme_file_path('/views/' . $view . '.php'); ?></div>
-    <?php if (is_page() && trim((string) get_post_field('post_content', get_queried_object_id()))) : ?>
+    <?php if ($view !== 'home' && is_page() && trim((string) get_post_field('post_content', get_queried_object_id()))) : ?>
         <section class="editor-content"><?php while (have_posts()) { the_post(); the_content(); } ?></section>
     <?php endif; ?>
 <?php else : ?>
     <div class="editor-content">
-        <nav><a href="<?php echo esc_url(home_url('/')); ?>">Plugins-store</a> · <a href="<?php echo esc_url(psv3_url('plugins')); ?>">Каталог</a> · <a href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a></nav>
+        <nav class="editor-nav"><a href="<?php echo esc_url(home_url('/')); ?>">Plugins-store</a> · <a href="<?php echo esc_url(psv3_url('plugins')); ?>">Каталог</a> · <a href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a></nav>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article><h1><?php if (is_singular()) { the_title(); } else { ?><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php } ?></h1>
             <?php if (is_singular()) { the_content(); } else { the_excerpt(); } ?></article>
@@ -33,6 +40,7 @@ $view = psv3_view();
 </main>
 <?php
 $dialog_labels = [
+    'mobile-nav' => 'Меню сайта',
     'mega' => 'Каталог плагинов',
     'profile-menu' => 'Меню личного кабинета',
     'login' => 'Вход в аккаунт',
@@ -42,7 +50,7 @@ $dialog_labels = [
 foreach ($dialog_labels as $overlay => $dialog_label) :
 ?>
     <dialog id="overlay-<?php echo esc_attr($overlay); ?>" class="ps-dialog ps-dialog-<?php echo esc_attr($overlay); ?>" aria-label="<?php echo esc_attr($dialog_label); ?>">
-        <?php if (in_array($overlay, ['mega', 'profile-menu'], true)) : ?>
+        <?php if (in_array($overlay, ['mobile-nav', 'mega', 'profile-menu'], true)) : ?>
             <button class="dialog-dismiss" type="button" data-close>Закрыть ×</button>
         <?php endif; ?>
         <?php require get_theme_file_path('/views/' . $overlay . '.php'); ?>

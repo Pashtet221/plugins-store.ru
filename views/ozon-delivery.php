@@ -10,6 +10,7 @@
 </div>
 <a id="n-275-262" class="layer n-275-262 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
 <a id="n-277-170" class="layer n-277-170 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
+<?php get_template_part('views/mobile-nav-toggle'); ?>
 </header>
 <span id="n-251-98" class="layer n-251-98 text section" >Главная  /  Плагины  /  Доставка Ozon</span>
 <div id="n-251-99" class="layer n-251-99 section" ><div id="n-251-100" class="layer n-251-100" ><div id="n-251-101" class="layer n-251-101" ><a id="n-251-102" class="layer n-251-102 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WooCommerce</a>

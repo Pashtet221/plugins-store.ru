@@ -9,6 +9,7 @@
 </div>
 <a id="n-275-264" class="layer n-275-264 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
 <a id="n-277-172" class="layer n-277-172 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
+<?php get_template_part('views/mobile-nav-toggle'); ?>
 </header>
 <span id="n-267-157" class="layer n-267-157 text section" >Главная  /  Публичная оферта</span>
 <div id="n-267-158" class="layer n-267-158 section" ><a id="n-267-159" class="layer n-267-159 text" href="<?php echo esc_url(psv3_url('offer')); ?>">Публичная оферта</a>

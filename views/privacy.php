@@ -9,6 +9,7 @@
 </div>
 <a id="n-275-263" class="layer n-275-263 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
 <a id="n-277-171" class="layer n-277-171 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
+<?php get_template_part('views/mobile-nav-toggle'); ?>
 </header>
 <span id="n-267-97" class="layer n-267-97 text section" >Главная  /  Политика конфиденциальности</span>
 <div id="n-267-98" class="layer n-267-98 section" ><h1 id="n-267-99" class="layer n-267-99 text" >Политика обработки

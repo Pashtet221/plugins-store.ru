@@ -10,6 +10,7 @@
 </div>
 <a id="n-275-266" class="layer n-275-266 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
 <a id="n-277-174" class="layer n-277-174 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
+<?php get_template_part('views/mobile-nav-toggle'); ?>
 </header>
 <a id="n-268-702" class="layer n-268-702 text section" href="<?php echo esc_url(psv3_url('home')); ?>">Главная  /  Плагины</a>
 <div id="n-268-703" class="layer n-268-703 section" ><a id="n-268-704" class="layer n-268-704 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">Каталог плагинов</a>

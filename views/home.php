@@ -10,6 +10,7 @@
 </div>
 <a id="n-275-259" class="layer n-275-259 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
 <a id="n-277-167" class="layer n-277-167 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
+<?php get_template_part('views/mobile-nav-toggle'); ?>
 </header>
 <div id="n-240-72" class="layer n-240-72 section home-hero" ><div id="n-240-73" class="layer n-240-73 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/97f54de6ba10a8802877dfb90b1cb5aeee4b0f21.jpeg')); ?>" alt="" style="object-fit:cover"></div>
 <div id="n-240-74" class="layer n-240-74" ><div id="n-240-75" class="layer n-240-75" ><span id="n-240-76" class="layer n-240-76 text" >WooCommerce · WordPress · 1С-Битрикс</span>
@@ -25,6 +26,23 @@
 </div>
 </div>
 <div id="n-240-83" class="layer n-240-83 section image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/240_83.png')); ?>" alt="" style="object-fit:fill"></div>
+<div class="home-brand-strip" aria-label="Платформы и интеграции">
+    <div class="home-brand-window">
+        <div class="home-brand-track" id="home-brand-track">
+            <?php
+            $brands = ['wordpress' => 'WordPress', 'woo' => 'WooCommerce', 'bitrix' => '1С-Битрикс', 'cdek' => 'СДЭК', 'ozon' => 'Ozon', 'yandex' => 'Яндекс', '1c' => '1С'];
+            foreach ([false, true] as $duplicate) :
+            ?>
+                <ul class="home-brand-group"<?php if ($duplicate) : ?> aria-hidden="true"<?php endif; ?>>
+                    <?php foreach ($brands as $file => $name) : ?>
+                        <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/brands/' . $file . '.png')); ?>" alt="<?php echo esc_attr($duplicate ? '' : $name); ?>"></li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <button class="brand-motion-toggle" type="button" aria-label="Пауза прокрутки логотипов" aria-pressed="false" aria-controls="home-brand-track"></button>
+</div>
 <div id="n-240-91" class="layer n-240-91 section home-catalog" ><span id="n-240-92" class="layer n-240-92 text" >Готовые плагины</span>
 <span id="n-240-93" class="layer n-240-93 text" >Выберите решение для своего магазина</span>
 <a id="n-240-94" class="layer n-240-94" href="<?php echo esc_url(psv3_url('plugins')); ?>"><span id="n-240-95" class="layer n-240-95 text" >Весь каталог ↗</span>
@@ -37,6 +55,7 @@
 </div>
 <div id="n-240-102" class="layer n-240-102 home-catalog-category" ><a id="n-240-103" class="layer n-240-103 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">1С-Битрикс</a>
 </div>
+<div class="home-catalog-cards" id="home-catalog-cards" role="group" aria-label="Готовые плагины">
 <div id="n-240-210" class="layer n-240-210 home-catalog-card" ><div id="n-240-104" class="layer n-240-104 image-layer home-card-cover" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/f6941378c9ca41863718c1fff81c3f288e96fa4c.jpeg')); ?>" alt="" style="object-fit:cover"></div>
 <span id="n-I240-210-240-206" class="layer n-I240-210-240-206 text" >Подсказки адресов</span>
 <span id="n-I240-210-240-207" class="layer n-I240-210-240-207 text" >DaData WooCommerce</span>
@@ -66,29 +85,30 @@
 <span id="n-I240-225-248-154" class="layer n-I240-225-248-154 text" >Условия покупки ↗</span>
 </div>
 </div>
-<div id="n-248-82" class="layer n-248-82 section" ><span id="n-248-83" class="layer n-248-83 text" >Условия покупки</span>
+<div class="catalog-slide-controls" aria-label="Листать готовые плагины">
+    <button type="button" data-slide="-1" aria-label="Предыдущий плагин" aria-controls="home-catalog-cards">←</button>
+    <button type="button" data-slide="1" aria-label="Следующий плагин" aria-controls="home-catalog-cards">→</button>
+</div>
+</div>
+<div id="n-248-82" class="layer n-248-82 section purchase-conditions" ><span id="n-248-83" class="layer n-248-83 text" >Условия покупки</span>
 <a id="n-248-84" class="layer n-248-84 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Все условия ↗</a>
-<div id="n-248-85" class="layer n-248-85" ><span id="n-248-86" class="layer n-248-86 text" >Гарантия и проверка</span>
+<div id="n-248-85" class="layer n-248-85 purchase-condition" ><span id="n-248-86" class="layer n-248-86 text" >Гарантия и проверка</span>
 <span id="n-248-87" class="layer n-248-87 text" >Проверьте требования к платформе и PHP на странице плагина.</span>
-<div id="n-249-86" class="layer n-249-86" ><div id="n-249-87" class="layer n-249-87" ><div id="n-249-88" class="layer n-249-88 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/249_88.png')); ?>" alt="" style="object-fit:fill"></div>
-<div id="n-249-89" class="layer n-249-89 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/249_89.png')); ?>" alt="" style="object-fit:fill"></div>
+<span id="n-249-86" class="layer n-249-86 purchase-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-3.5 7-10V6l-7-3-7 3v6c0 6.5 7 10 7 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+</span>
 </div>
-</div>
-</div>
-<div id="n-248-88" class="layer n-248-88" ><span id="n-248-89" class="layer n-248-89 text" >Поддержка и обновления</span>
+<div id="n-248-88" class="layer n-248-88 purchase-condition" ><span id="n-248-89" class="layer n-248-89 text" >Поддержка и обновления</span>
 <span id="n-248-90" class="layer n-248-90 text" >Напишите, если нужна помощь с установкой, настройкой или ошибкой.</span>
-<div id="n-249-90" class="layer n-249-90" ><div id="n-249-91" class="layer n-249-91" ><div id="n-249-92" class="layer n-249-92 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/249_92.png')); ?>" alt="" style="object-fit:fill"></div>
-<div id="n-249-93" class="layer n-249-93 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/249_93.png')); ?>" alt="" style="object-fit:fill"></div>
-<div id="n-249-94" class="layer n-249-94 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/249_94.png')); ?>" alt="" style="object-fit:fill"></div>
+<span id="n-249-90" class="layer n-249-90 purchase-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1M18 17v1a3 3 0 0 1-3 3h-3"/><rect x="3" y="12" width="4" height="6" rx="2"/><rect x="17" y="12" width="4" height="6" rx="2"/></svg>
+</span>
 </div>
-</div>
-</div>
-<div id="n-248-91" class="layer n-248-91" ><span id="n-248-92" class="layer n-248-92 text" >Запрос на возврат</span>
+<div id="n-248-91" class="layer n-248-91 purchase-condition" ><span id="n-248-92" class="layer n-248-92 text" >Запрос на возврат</span>
 <span id="n-248-93" class="layer n-248-93 text" >Если нужен возврат, ответьте в переписке по покупке.</span>
-<div id="n-249-95" class="layer n-249-95" ><div id="n-249-96" class="layer n-249-96" ><div id="n-249-97" class="layer n-249-97 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/249_97.png')); ?>" alt="" style="object-fit:fill"></div>
-<div id="n-249-98" class="layer n-249-98 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/249_98.png')); ?>" alt="" style="object-fit:fill"></div>
-</div>
-</div>
+<span id="n-249-95" class="layer n-249-95 purchase-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m8 5-5 5 5 5M3 10h11a6 6 0 0 1 6 6v2"/></svg>
+</span>
 </div>
 </div>
 <div id="n-240-108" class="layer n-240-108 section" ><div id="n-240-109" class="layer n-240-109 ornament" ></div>

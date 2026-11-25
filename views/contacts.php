@@ -10,6 +10,7 @@
 </div>
 <a id="n-277-98" class="layer n-277-98 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
 <a id="n-277-180" class="layer n-277-180 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
+<?php get_template_part('views/mobile-nav-toggle'); ?>
 </header>
 <a id="n-277-99" class="layer n-277-99 text section" href="<?php echo esc_url(psv3_url('home')); ?>">Главная</a>
 <span id="n-277-100" class="layer n-277-100 text section" >/  О проекте и контакты</span>
