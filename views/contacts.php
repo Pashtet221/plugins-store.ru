@@ -1,3 +1,9 @@
+<?php
+$contact_phone = '+79250404189';
+$contact_telegram = 'https://t.me/' . $contact_phone;
+$contact_email = 'info@plugins-store.ru';
+$contact_hours = get_theme_mod('psv3_hours');
+?>
 <article id="n-277-86" class="scene n-277-86" ><div id="n-277-87" class="layer n-277-87 section backdrop-layer ornament" ></div>
 <header id="n-277-88" class="layer n-277-88 section site-header" ><a id="n-277-89" class="layer n-277-89 text site-brand" href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
 <button id="n-277-90" class="layer n-277-90 text" data-open="mega" type="button">Плагины</button>
@@ -37,21 +43,17 @@ Plugins-store</h1>
 </div>
 <div id="n-277-121" class="layer n-277-121 section" ><span id="n-277-122" class="layer n-277-122 text" >Контакты и реквизиты</span>
 <div id="n-277-123" class="layer n-277-123" ><span id="n-277-124" class="layer n-277-124 text" >Связаться со мной</span>
-<a id="n-277-125" class="layer n-277-125 text" href="<?php echo esc_url(psv3_telegram()); ?>">Telegram</a>
-<a id="n-277-126" class="layer n-277-126 text" href="<?php echo esc_url(psv3_telegram()); ?>"><?php echo esc_html(get_theme_mod("psv3_telegram") ?: "[Ссылка на Telegram]"); ?></a>
+<a id="n-277-125" class="layer n-277-125 text" href="<?php echo esc_url($contact_telegram); ?>">Telegram</a>
+<a id="n-277-126" class="layer n-277-126 text" href="<?php echo esc_url($contact_telegram); ?>"><?php echo esc_html($contact_phone); ?></a>
 <span id="n-277-127" class="layer n-277-127 text" >Почта</span>
-<a id="n-277-128" class="layer n-277-128 text" href="<?php echo esc_url('mailto:' . get_theme_mod('psv3_email')); ?>"><?php echo esc_html(get_theme_mod("psv3_email") ?: "[Email для обращений]"); ?></a>
-<span id="n-277-129" class="layer n-277-129 text" >Время работы поддержки</span>
-<span id="n-277-130" class="layer n-277-130 text" ><?php echo esc_html(get_theme_mod("psv3_hours") ?: "[Дни, часы работы и часовой пояс]"); ?></span>
+<a id="n-277-128" class="layer n-277-128 text" href="<?php echo esc_url('mailto:' . $contact_email); ?>"><?php echo esc_html($contact_email); ?></a>
+<?php if ($contact_hours) : ?>
+<span id="n-277-129" class="layer n-277-129 text">Время работы поддержки</span>
+<span id="n-277-130" class="layer n-277-130 text"><?php echo esc_html($contact_hours); ?></span>
+<?php endif; ?>
 </div>
 <div id="n-277-131" class="layer n-277-131" ><span id="n-277-132" class="layer n-277-132 text" >Оплата и документы</span>
-<span id="n-277-133" class="layer n-277-133 text" >Статус</span>
-<span id="n-277-134" class="layer n-277-134 text" >Самозанятый (НПД)</span>
-<span id="n-277-135" class="layer n-277-135 text" >ФИО</span>
-<span id="n-277-136" class="layer n-277-136 text" ><?php echo esc_html(get_theme_mod("psv3_person") ?: "[Фамилия, имя и отчество]"); ?></span>
-<span id="n-277-137" class="layer n-277-137 text" >ИНН</span>
-<span id="n-277-138" class="layer n-277-138 text" ><?php echo esc_html(get_theme_mod("psv3_tax_id") ?: "[ИНН]"); ?></span>
-<span id="n-277-139" class="layer n-277-139 text" >После оплаты направлю чек из приложения «Мой налог».</span>
+<span id="n-277-139" class="layer n-277-139 text">Реквизиты и документы предоставлю по запросу.</span>
 </div>
 </div>
 <footer id="n-277-140" class="layer n-277-140 section site-footer" ><div id="n-277-141" class="layer n-277-141" ><div id="n-277-142" class="layer n-277-142" ><a id="n-277-143" class="layer n-277-143 text" href="<?php echo esc_url(psv3_url('home')); ?>">plugins.store</a>
@@ -71,7 +73,7 @@ Plugins-store</h1>
 <div id="n-277-155" class="layer n-277-155" ><span id="n-277-156" class="layer n-277-156 text" >Помощь</span>
 <a id="n-277-157" class="layer n-277-157 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Документация</a>
 <a id="n-277-158" class="layer n-277-158 text" href="<?php echo esc_url(psv3_url('account')); ?>">Личный кабинет</a>
-<a id="n-277-159" class="layer n-277-159 text" href="<?php echo esc_url(psv3_telegram()); ?>">Telegram</a>
+<a id="n-277-159" class="layer n-277-159 text" href="<?php echo esc_url($contact_telegram); ?>">Telegram</a>
 </div>
 </div>
 <div id="n-277-160" class="layer n-277-160 ornament" ></div>
