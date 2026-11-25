@@ -18,9 +18,9 @@ add_action('after_setup_theme', static function () {
     add_theme_support('automatic-feed-links');
 });
 add_action('wp_enqueue_scripts', static function () {
-    wp_enqueue_style('psv3-layout', get_theme_file_uri('/assets/theme.css'), [], '1.0.7');
-    wp_enqueue_style('psv3-geometry', get_theme_file_uri('/assets/geometry.css'), ['psv3-layout'], '1.0.7');
-    wp_enqueue_script('psv3-ui', get_theme_file_uri('/assets/theme.js'), [], '1.0.7', true);
+    wp_enqueue_style('psv3-layout', get_theme_file_uri('/assets/theme.css'), [], '1.0.8');
+    wp_enqueue_style('psv3-geometry', get_theme_file_uri('/assets/geometry.css'), ['psv3-layout'], '1.0.8');
+    wp_enqueue_script('psv3-ui', get_theme_file_uri('/assets/theme.js'), [], '1.0.8', true);
 });
 add_action('customize_register', static function ($customizer) {
     $customizer->add_section('psv3_contacts', ['title' => 'Plugins-store']);
