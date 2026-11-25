@@ -688,3 +688,18 @@ html {
     .blog-card-featured .blog-card-cover { order: 1; }
     .blog-card-featured .blog-card-cover img { height: 100%; max-height: 380px; }
 }
+
+.contact-messenger-label, .contact-messenger-link {
+    --source-size: 16px;
+    font-size: 16px;
+    line-height: 1.25;
+}
+.contact-messenger-label { color: #191d20; font-weight: 600; }
+.contact-messenger-link { color: #515d65; }
+
+@media (width > 1280px) {
+    .contact-messenger-label { left: 19px; }
+    .contact-messenger-link { left: 190px; }
+    .contact-max { top: 115px; }
+    .contact-whatsapp { top: 154px; }
+}

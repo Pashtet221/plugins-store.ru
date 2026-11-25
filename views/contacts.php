@@ -1,6 +1,8 @@
 <?php
 $contact_phone = '+79250404189';
 $contact_telegram = 'https://t.me/' . $contact_phone;
+$contact_max = 'https://max.ru/u/f9LHodD0cOJbdYFRJnINg9bi-nZNK5jaoRGHmt2DikMFZct5kLZUEm0ZkIA';
+$contact_whatsapp = 'https://wa.me/' . ltrim($contact_phone, '+');
 $contact_email = 'info@plugins-store.ru';
 $contact_hours = get_theme_mod('psv3_hours');
 ?>
@@ -45,6 +47,10 @@ Plugins-store</h1>
 <div id="n-277-123" class="layer n-277-123" ><span id="n-277-124" class="layer n-277-124 text" >Связаться со мной</span>
 <a id="n-277-125" class="layer n-277-125 text" href="<?php echo esc_url($contact_telegram); ?>">Telegram</a>
 <a id="n-277-126" class="layer n-277-126 text" href="<?php echo esc_url($contact_telegram); ?>"><?php echo esc_html($contact_phone); ?></a>
+<span class="layer text contact-messenger-label contact-max">MAX</span>
+<a class="layer text contact-messenger-link contact-max" href="<?php echo esc_url($contact_max); ?>">Написать в MAX</a>
+<span class="layer text contact-messenger-label contact-whatsapp">WhatsApp</span>
+<a class="layer text contact-messenger-link contact-whatsapp" href="<?php echo esc_url($contact_whatsapp); ?>"><?php echo esc_html($contact_phone); ?></a>
 <span id="n-277-127" class="layer n-277-127 text" >Почта</span>
 <a id="n-277-128" class="layer n-277-128 text" href="<?php echo esc_url('mailto:' . $contact_email); ?>"><?php echo esc_html($contact_email); ?></a>
 <?php if ($contact_hours) : ?>
