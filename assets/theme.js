@@ -8,6 +8,11 @@
         if (!dialog.open) dialog.showModal();
     };
 
+    const mobileNav = document.getElementById('overlay-mobile-nav');
+    matchMedia('(max-width: 767px)').addEventListener('change', (event) => {
+        if (!event.matches) mobileNav?.close();
+    });
+
     document.addEventListener('click', (event) => {
         const trigger = event.target.closest('[data-open], [data-close]');
         if (trigger) {
@@ -17,7 +22,10 @@
         } else if (event.target.closest('[data-nav-anchor]')) {
             event.target.closest('dialog')?.close();
         } else if (event.target.matches('dialog')) {
-            event.target.close();
+            const { left, right, top, bottom } = event.target.getBoundingClientRect();
+            if (event.clientX < left || event.clientX > right || event.clientY < top || event.clientY > bottom) {
+                event.target.close();
+            }
         }
 
         const copy = event.target.closest('[data-copy-key][data-key]');

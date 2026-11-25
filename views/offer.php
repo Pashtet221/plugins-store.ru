@@ -1,4 +1,4 @@
-<article id="n-267-146" class="scene n-267-146" ><header id="n-267-147" class="layer n-267-147 section site-header" ><a id="n-267-148" class="layer n-267-148 text" href="<?php echo esc_url(psv3_url('home')); ?>">plugins.store</a>
+<article id="n-267-146" class="scene n-267-146" ><header id="n-267-147" class="layer n-267-147 section site-header" ><a id="n-267-148" class="layer n-267-148 text site-brand" href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
 <button id="n-267-149" class="layer n-267-149 text" data-open="mega" type="button">Плагины</button>
 <a id="n-267-150" class="layer n-267-150 text" href="<?php echo esc_url(psv3_url('services')); ?>">Услуги</a>
 <a id="n-267-151" class="layer n-267-151 text" href="<?php echo esc_url(psv3_url('home')); ?>#n-240-134">Мини-кейсы</a>

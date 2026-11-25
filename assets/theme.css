@@ -43,9 +43,12 @@ button.layer.text { background: transparent; }
 .image-layer > img { border-radius: inherit; }
 
 .dialog-dismiss { display: none; }
+.site-logo { width: 44px; height: 44px; object-fit: contain; }
+.service-breadcrumb { display: contents; }
 
 @media (width > 1280px) {
     .scene-host { max-width: 1440px; container-type: inline-size; }
+    .scene .site-header > .site-brand { top: 7px; width: 44px; height: 44px; }
     .scene-host > .scene { zoom: min(1, calc(100cqw / 1440px)); }
 }
 
@@ -100,7 +103,7 @@ button.layer.text { background: transparent; }
     .scene-host > .scene > .section:where(:not(.text, .image-layer, .site-header, .site-footer)) {
         padding: var(--space-panel);
     }
-    .scene-host > .scene > .section:where(:not(.image-layer, .site-header, .site-footer, .home-hero, .home-catalog, .catalog-intro, .catalog-comparison, .catalog-filters, [data-grid])):not(.text) {
+    .scene-host > .scene > .section:where(:not(.image-layer, .ornament, .backdrop-layer, .site-header, .site-footer, .home-hero, .home-catalog, .catalog-intro, .catalog-comparison, .catalog-filters, [data-grid])):not(.text) {
         display: grid;
         gap: var(--space-card);
     }
@@ -146,7 +149,35 @@ button.layer.text { background: transparent; }
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
         gap: var(--space-card);
     }
-    .scene .site-footer a.text { margin-block: 0; }
+    .scene .site-footer > .layer:first-child > .layer {
+        display: grid;
+        align-content: start;
+        gap: var(--space-item);
+    }
+    .scene .site-footer .text { margin-block: 0; }
+
+    .service-breadcrumb {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: var(--space-text) var(--space-item);
+        margin-inline: var(--space-gutter);
+    }
+    .scene .service-breadcrumb a { min-height: 0; }
+    .scene-host > .scene > .section > a.layer.service-price-card {
+        display: grid;
+        justify-self: stretch;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: var(--space-item) var(--space-card);
+        margin: 0;
+        padding: var(--space-panel);
+        background: #272c30;
+    }
+    .scene .service-price-card > .text { margin: 0; grid-column: 1 / -1; }
+    .scene .service-price-card > .service-price-title { font-size: clamp(20px, 3vw, 28px); }
+    .scene .service-price-card > .service-price-amount { grid-column: 1; align-self: center; }
+    .scene .service-price-card > .service-price-arrow { grid-column: 2; }
+
 
     .scene .home-hero {
         display: grid;
@@ -311,6 +342,7 @@ button.layer.text { background: transparent; }
 }
 
 @media (width <= 767px) {
+    .scene-host > .scene { padding-block-start: 0; }
     .scene .site-header { justify-content: space-between; flex-wrap: nowrap; }
     .scene .site-header > .layer:not(:first-child) { display: none; }
     .scene .site-header > a:first-child { margin: 0; overflow-wrap: normal; }
@@ -318,7 +350,7 @@ button.layer.text { background: transparent; }
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: var(--space-gutter);
+        margin: 0 var(--space-gutter);
         padding: var(--space-card);
         border-radius: 16px;
         background: #fff;
@@ -347,18 +379,60 @@ button.layer.text { background: transparent; }
         background: currentColor;
         box-shadow: 0 -6px currentColor, 0 6px currentColor;
     }
-    .mobile-nav-links { display: grid; gap: 4px; padding: 0 16px 16px; }
-    .mobile-nav-links a {
-        display: block;
-        padding: var(--space-card);
-        min-height: 44px;
-        color: #191d20;
-        text-decoration: none;
-        border-radius: 10px;
+    html:has(.ps-dialog-mobile-nav[open]) { overflow: hidden; }
+    .ps-dialog-mobile-nav {
+        position: fixed;
+        inset: 0 0 0 auto;
+        width: min(100%, 350px);
+        height: 100dvh;
+        max-height: none;
+        margin: 0;
+        border-radius: 22px 0 0 22px;
+        background: #171d1c;
+        color: #f2f7f4;
+        box-shadow: -16px 0 64px rgb(10 20 16 / 25%);
     }
-    .mobile-nav-links a:hover { background: #f1f4f7; }
-    .mobile-nav-links .mobile-nav-account { margin-top: 8px; background: #73e28f; font-weight: 600; }
-    .ps-dialog-mobile-nav { max-width: min(calc(100% - 24px), 460px); }
+    .ps-dialog-mobile-nav[open] {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-section);
+        padding: var(--space-section);
+    }
+    .ps-dialog-mobile-nav::backdrop { background: rgb(13 21 19 / 66%); }
+    .mobile-drawer-header { display: flex; align-items: center; justify-content: space-between; }
+    .mobile-drawer-close {
+        width: 44px;
+        height: 44px;
+        background: #293331;
+        color: inherit;
+        border: 0;
+        border-radius: 12px;
+        font-size: 26px;
+        cursor: pointer;
+    }
+    .mobile-nav-links { display: grid; }
+    .mobile-nav-links a, .mobile-nav-account {
+        display: flex;
+        align-items: center;
+        min-height: 50px;
+        padding: var(--space-card);
+        color: inherit;
+        text-decoration: none;
+    }
+    .mobile-nav-links a { border-bottom: 1px solid #35413d; font-size: 18px; }
+    .mobile-nav-links a:hover, .mobile-nav-links a[aria-current="page"] {
+        color: #83efa1;
+        background: #222b28;
+    }
+    .mobile-nav-account {
+        justify-content: space-between;
+        margin-block-start: auto;
+        border-radius: 12px;
+        background: #73e28f;
+        color: #17201a;
+        font-weight: 600;
+    }
+    .ps-dialog-mobile-nav :focus-visible { outline-color: #91f0ac; }
 
     .scene-host .n-240-83 { display: none; }
     .home-brand-strip {
@@ -456,3 +530,10 @@ button.layer.text { background: transparent; }
     .home-brand-window { overflow-x: auto; }
     .home-brand-group[aria-hidden="true"], .brand-motion-toggle { display: none; }
 }
+
+
+@media (width <= 767px) and (prefers-reduced-motion: no-preference) {
+    .ps-dialog-mobile-nav[open] { animation: mobile-drawer-enter 200ms ease-out; }
+}
+
+@keyframes mobile-drawer-enter { from { transform: translateX(100%); } }

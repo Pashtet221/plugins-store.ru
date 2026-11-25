@@ -1,5 +1,5 @@
 <article id="n-273-86" class="scene n-273-86" ><div id="n-273-87" class="layer n-273-87 section backdrop-layer ornament" ></div>
-<header id="n-273-88" class="layer n-273-88 section site-header" ><a id="n-273-89" class="layer n-273-89 text" href="<?php echo esc_url(psv3_url('home')); ?>">plugins.store</a>
+<header id="n-273-88" class="layer n-273-88 section site-header" ><a id="n-273-89" class="layer n-273-89 text site-brand" href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
 <button id="n-273-90" class="layer n-273-90 text" data-open="mega" type="button">Плагины</button>
 <a id="n-273-91" class="layer n-273-91 text" href="<?php echo esc_url(psv3_url('services')); ?>">Услуги</a>
 <a id="n-273-92" class="layer n-273-92 text" href="<?php echo esc_url(psv3_url('home')); ?>#n-240-134">Мини-кейсы</a>

@@ -1,5 +1,5 @@
 <article id="n-270-86" class="scene n-270-86" ><div id="n-270-87" class="layer n-270-87 section backdrop-layer ornament" ></div>
-<header id="n-270-88" class="layer n-270-88 section site-header" ><a id="n-270-89" class="layer n-270-89 text" href="<?php echo esc_url(psv3_url('home')); ?>">plugins.store</a>
+<header id="n-270-88" class="layer n-270-88 section site-header" ><a id="n-270-89" class="layer n-270-89 text site-brand" href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
 <button id="n-270-90" class="layer n-270-90 text" data-open="mega" type="button">Плагины</button>
 <a id="n-270-91" class="layer n-270-91 text" href="<?php echo esc_url(psv3_url('services')); ?>">Услуги</a>
 <a id="n-270-92" class="layer n-270-92 text" href="<?php echo esc_url(psv3_url('home')); ?>#n-240-134">Мини-кейсы</a>
@@ -12,37 +12,37 @@
 <a id="n-277-175" class="layer n-277-175 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
 <?php get_template_part('views/mobile-nav-toggle'); ?>
 </header>
-<a id="n-270-98" class="layer n-270-98 text section" href="<?php echo esc_url(psv3_url('home')); ?>">Главная</a>
-<span id="n-270-99" class="layer n-270-99 text section" >/  Услуги</span>
+<nav class="service-breadcrumb" aria-label="Хлебные крошки"><a id="n-270-98" class="layer n-270-98 text" href="<?php echo esc_url(psv3_url('home')); ?>">Главная</a>
+<span id="n-270-99" class="layer n-270-99 text"  aria-current="page">/ Услуги</span></nav>
 <div id="n-270-100" class="layer n-270-100 section" ><h1 id="n-270-101" class="layer n-270-101 text" >Разработка на заказ
 для WooCommerce</h1>
 <span id="n-270-102" class="layer n-270-102 text" >Разрабатываю плагины и дорабатываю магазины. После обсуждения согласуем объём работ, стоимость и срок.</span>
 <a id="n-270-103" class="layer n-270-103" href="#n-270-156"><span id="n-270-104" class="layer n-270-104 text" >Описать задачу ↓</span>
 </a>
 <span id="n-270-105" class="layer n-270-105 text" >Ориентиры по стоимости</span>
-<a id="n-270-106" class="layer n-270-106" href="#n-270-156"><div id="n-270-107" class="layer n-270-107 ornament" ></div>
-<span id="n-270-108" class="layer n-270-108 text" >Разработка плагинов</span>
+<a id="n-270-106" class="layer n-270-106 service-price-card" href="#n-270-156"><div id="n-270-107" class="layer n-270-107 ornament" ></div>
+<span id="n-270-108" class="layer n-270-108 text service-price-title" >Разработка плагинов</span>
 <span id="n-270-109" class="layer n-270-109 text" >Своя логика для скидок, каталога, корзины и админки.</span>
-<span id="n-270-110" class="layer n-270-110 text" >15–30 тыс. ₽</span>
-<span id="n-270-111" class="layer n-270-111 text" >↘</span>
+<span id="n-270-110" class="layer n-270-110 text service-price-amount" >15–30 тыс. ₽</span>
+<span id="n-270-111" class="layer n-270-111 text service-price-arrow" aria-hidden="true">↘</span>
 </a>
-<a id="n-270-112" class="layer n-270-112" href="#n-270-156"><div id="n-270-113" class="layer n-270-113 ornament" ></div>
-<span id="n-270-114" class="layer n-270-114 text" >Интеграции по API</span>
+<a id="n-270-112" class="layer n-270-112 service-price-card" href="#n-270-156"><div id="n-270-113" class="layer n-270-113 ornament" ></div>
+<span id="n-270-114" class="layer n-270-114 text service-price-title" >Интеграции по API</span>
 <span id="n-270-115" class="layer n-270-115 text" >Доставка, складские системы и обмен данными с внешними сервисами.</span>
-<span id="n-270-116" class="layer n-270-116 text" >8–25 тыс. ₽</span>
-<span id="n-270-117" class="layer n-270-117 text" >↘</span>
+<span id="n-270-116" class="layer n-270-116 text service-price-amount" >8–25 тыс. ₽</span>
+<span id="n-270-117" class="layer n-270-117 text service-price-arrow" aria-hidden="true">↘</span>
 </a>
-<a id="n-270-118" class="layer n-270-118" href="#n-270-156"><div id="n-270-119" class="layer n-270-119 ornament" ></div>
-<span id="n-270-120" class="layer n-270-120 text" >Аудит и ускорение</span>
+<a id="n-270-118" class="layer n-270-118 service-price-card" href="#n-270-156"><div id="n-270-119" class="layer n-270-119 ornament" ></div>
+<span id="n-270-120" class="layer n-270-120 text service-price-title" >Аудит и ускорение</span>
 <span id="n-270-121" class="layer n-270-121 text" >Диагностика загрузки, запросов к базе и влияния плагинов на скорость.</span>
-<span id="n-270-122" class="layer n-270-122 text" >5–20 тыс. ₽</span>
-<span id="n-270-123" class="layer n-270-123 text" >↘</span>
+<span id="n-270-122" class="layer n-270-122 text service-price-amount" >5–20 тыс. ₽</span>
+<span id="n-270-123" class="layer n-270-123 text service-price-arrow" aria-hidden="true">↘</span>
 </a>
-<a id="n-270-124" class="layer n-270-124" href="#n-270-156"><div id="n-270-125" class="layer n-270-125 ornament" ></div>
-<span id="n-270-126" class="layer n-270-126 text" >Кастомизация чекаута</span>
+<a id="n-270-124" class="layer n-270-124 service-price-card" href="#n-270-156"><div id="n-270-125" class="layer n-270-125 ornament" ></div>
+<span id="n-270-126" class="layer n-270-126 text service-price-title" >Кастомизация чекаута</span>
 <span id="n-270-127" class="layer n-270-127 text" >Поля заказа, подсказки адресов и логика оплаты и доставки.</span>
-<span id="n-270-128" class="layer n-270-128 text" >10–25 тыс. ₽</span>
-<span id="n-270-129" class="layer n-270-129 text" >↘</span>
+<span id="n-270-128" class="layer n-270-128 text service-price-amount" >10–25 тыс. ₽</span>
+<span id="n-270-129" class="layer n-270-129 text service-price-arrow" aria-hidden="true">↘</span>
 </a>
 </div>
 <div id="n-270-130" class="layer n-270-130 section" ><span id="n-270-131" class="layer n-270-131 text" >Как проходит работа</span>

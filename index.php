@@ -15,7 +15,7 @@ $account_requires_login = $view === 'account' && !is_user_logged_in();
 <?php psv3_notice(); ?>
 <?php if (!$view || $account_requires_login) : ?>
     <header class="mobile-fallback-header">
-        <a href="<?php echo esc_url(psv3_url('home')); ?>">plugins.store</a>
+        <a href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
         <?php get_template_part('views/mobile-nav-toggle'); ?>
     </header>
 <?php endif; ?>
@@ -50,7 +50,7 @@ $dialog_labels = [
 foreach ($dialog_labels as $overlay => $dialog_label) :
 ?>
     <dialog id="overlay-<?php echo esc_attr($overlay); ?>" class="ps-dialog ps-dialog-<?php echo esc_attr($overlay); ?>" aria-label="<?php echo esc_attr($dialog_label); ?>">
-        <?php if (in_array($overlay, ['mobile-nav', 'mega', 'profile-menu'], true)) : ?>
+        <?php if (in_array($overlay, ['mega', 'profile-menu'], true)) : ?>
             <button class="dialog-dismiss" type="button" data-close>Закрыть ×</button>
         <?php endif; ?>
         <?php require get_theme_file_path('/views/' . $overlay . '.php'); ?>
