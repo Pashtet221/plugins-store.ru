@@ -11,6 +11,39 @@ $account_requires_login = $view === 'account' && !is_user_logged_in();
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<!-- Yandex.Metrika counter -->
+<script>
+    (function (window, document, url) {
+        window.ym = window.ym || function () {
+            (window.ym.a = window.ym.a || []).push(arguments);
+        };
+        window.ym.l = Date.now();
+
+        for (var index = 0; index < document.scripts.length; index++) {
+            if (document.scripts[index].src === url) return;
+        }
+
+        var tag = document.createElement('script');
+        tag.async = true;
+        tag.src = url;
+        document.head.appendChild(tag);
+    })(window, document, 'https://mc.yandex.ru/metrika/tag.js?id=108973499');
+
+    ym(108973499, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+    });
+</script>
+<noscript>
+    <img src="https://mc.yandex.ru/watch/108973499" width="1" height="1" style="position:absolute; left:-9999px;" alt="">
+</noscript>
+<!-- /Yandex.Metrika counter -->
 <main id="content">
 <?php psv3_notice(); ?>
 <?php if (!$view || $account_requires_login) : ?>
