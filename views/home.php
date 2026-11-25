@@ -45,16 +45,18 @@
 </div>
 <div id="n-240-91" class="layer n-240-91 section home-catalog" ><span id="n-240-92" class="layer n-240-92 text" >Готовые плагины</span>
 <span id="n-240-93" class="layer n-240-93 text" >Выберите решение для своего магазина</span>
+<nav class="home-catalog-tabs" aria-label="Разделы каталога">
 <a id="n-240-94" class="layer n-240-94" href="<?php echo esc_url(psv3_url('plugins')); ?>"><span id="n-240-95" class="layer n-240-95 text" >Весь каталог ↗</span>
 </a>
 <div id="n-240-96" class="layer n-240-96 home-catalog-category" ><span id="n-240-97" class="layer n-240-97 text" >Все</span>
 </div>
-<div id="n-240-98" class="layer n-240-98 home-catalog-category" ><a id="n-240-99" class="layer n-240-99 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WooCommerce</a>
-</div>
-<div id="n-240-100" class="layer n-240-100 home-catalog-category" ><a id="n-240-101" class="layer n-240-101 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WordPress</a>
-</div>
-<div id="n-240-102" class="layer n-240-102 home-catalog-category" ><a id="n-240-103" class="layer n-240-103 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">1С-Битрикс</a>
-</div>
+<a id="n-240-98" class="layer n-240-98 home-catalog-category" href="<?php echo esc_url(psv3_url('plugins')); ?>"><span id="n-240-99" class="layer n-240-99 text">WooCommerce</span>
+</a>
+<a id="n-240-100" class="layer n-240-100 home-catalog-category" href="<?php echo esc_url(psv3_url('plugins')); ?>"><span id="n-240-101" class="layer n-240-101 text">WordPress</span>
+</a>
+<a id="n-240-102" class="layer n-240-102 home-catalog-category" href="<?php echo esc_url(psv3_url('plugins')); ?>"><span id="n-240-103" class="layer n-240-103 text">1С-Битрикс</span>
+</a>
+</nav>
 <div class="home-catalog-cards" id="home-catalog-cards" role="group" aria-label="Готовые плагины">
 <div id="n-240-210" class="layer n-240-210 home-catalog-card" ><div id="n-240-104" class="layer n-240-104 image-layer home-card-cover" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/f6941378c9ca41863718c1fff81c3f288e96fa4c.jpeg')); ?>" alt="" style="object-fit:cover"></div>
 <span id="n-I240-210-240-206" class="layer n-I240-210-240-206 text" >Подсказки адресов</span>
@@ -131,14 +133,13 @@
 <span id="n-240-127" class="layer n-240-127 text" >Диагностика ошибок и помощь с обновлениями.</span>
 <span id="n-240-128" class="layer n-240-128 text" >Подробнее ↗</span>
 </div>
-<div id="n-240-129" class="layer n-240-129" ><div id="n-245-110" class="layer n-245-110" ></div>
+<div id="n-240-129" class="layer n-240-129" ><div id="n-245-110" class="layer n-245-110 ornament" ></div>
 <div id="n-245-111" class="layer n-245-111 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/1df8bd777a6c4a8729dbba7fd9fefa45aeeddccb.jpeg')); ?>" alt="" style="object-fit:cover"></div>
 <h1 id="n-245-112" class="layer n-245-112 text" >Поможем подобрать
 плагин для магазина</h1>
 <span id="n-245-113" class="layer n-245-113 text" >Опишите задачу — подскажем, какой плагин подойдёт для вашей платформы.</span>
-<a id="n-245-114" class="layer n-245-114" href="<?php echo esc_url(psv3_url('services')); ?>#n-270-156"><span id="n-245-115" class="layer n-245-115 text" >Подобрать плагин</span>
-<div id="n-245-116" class="layer n-245-116" ><div id="n-245-117" class="layer n-245-117 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/245_117.png')); ?>" alt="" style="object-fit:fill"></div>
-</div>
+<a id="n-245-114" class="layer n-245-114 icon-action" href="<?php echo esc_url(psv3_url('services')); ?>#n-270-156"><span id="n-245-115" class="layer n-245-115 text" >Подобрать плагин</span>
+<svg class="layer n-245-116 action-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
 </a>
 </div>
 </div>
@@ -184,14 +185,13 @@
 <span id="n-240-173" class="layer n-240-173 text" >Опишите задачу. Обсудим новый модуль или доработку существующего.</span>
 </div>
 </div>
-<div id="n-240-174" class="layer n-240-174 section" ><div id="n-245-118" class="layer n-245-118" ></div>
+<div id="n-240-174" class="layer n-240-174 section" ><div id="n-245-118" class="layer n-245-118 ornament" ></div>
 <div id="n-245-119" class="layer n-245-119 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/a542bf60ec826ad47c9ed09838fb0482bd2009b9.jpeg')); ?>" alt="" style="object-fit:cover"></div>
 <h1 id="n-245-120" class="layer n-245-120 text" >Нужен плагин
 под ваш магазин?</h1>
 <span id="n-245-121" class="layer n-245-121 text" >Расскажите, что нужно магазину. Обсудим разработку модуля или интеграцию по API.</span>
-<a id="n-245-122" class="layer n-245-122" href="<?php echo esc_url(psv3_url('services')); ?>#n-270-156"><span id="n-245-123" class="layer n-245-123 text" >Обсудить проект в Telegram</span>
-<div id="n-245-124" class="layer n-245-124" ><div id="n-245-125" class="layer n-245-125 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/245_125.png')); ?>" alt="" style="object-fit:fill"></div>
-</div>
+<a id="n-245-122" class="layer n-245-122 icon-action" href="<?php echo esc_url(psv3_url('services')); ?>#n-270-156"><span id="n-245-123" class="layer n-245-123 text" >Обсудить проект в Telegram</span>
+<svg class="layer n-245-124 action-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
 </a>
 </div>
 <footer id="n-240-179" class="layer n-240-179 section site-footer" ><div id="n-240-180" class="layer n-240-180" ><div id="n-240-181" class="layer n-240-181" ><a id="n-240-182" class="layer n-240-182 text" href="<?php echo esc_url(psv3_url('home')); ?>">plugins.store</a>
