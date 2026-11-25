@@ -81,6 +81,29 @@
         updateControls();
     }
 
+    const toc = document.querySelector('.post-toc');
+    if (toc) {
+        const headings = [...document.querySelectorAll('.post-body h2, .post-body h3')]
+            .filter((heading) => heading.textContent.trim());
+        if (headings.length > 1) {
+            const list = toc.querySelector('ul');
+            headings.forEach((heading, index) => {
+                if (!heading.id) {
+                    let id = 'post-section-' + (index + 1);
+                    while (document.getElementById(id)) id += '-heading';
+                    heading.id = id;
+                }
+                const item = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = '#' + encodeURIComponent(heading.id);
+                link.textContent = heading.textContent.trim();
+                item.append(link);
+                list.append(item);
+            });
+            toc.hidden = false;
+        }
+    }
+
     const initialFilter = new URLSearchParams(location.search).get('filter');
     if (initialFilter) {
         [...document.querySelectorAll('button[data-filter]')]

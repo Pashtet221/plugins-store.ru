@@ -1,6 +1,7 @@
 <?php
 defined('ABSPATH') || exit;
 $view = psv3_view();
+$is_single_post = is_singular('post');
 $account_requires_login = $view === 'account' && !is_user_logged_in();
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
@@ -46,7 +47,7 @@ $account_requires_login = $view === 'account' && !is_user_logged_in();
 <!-- /Yandex.Metrika counter -->
 <main id="content">
 <?php psv3_notice(); ?>
-<?php if (!$view || $account_requires_login) : ?>
+<?php if (!$is_single_post && (!$view || $account_requires_login)) : ?>
     <header class="mobile-fallback-header">
         <a href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
         <?php get_template_part('views/mobile-nav-toggle'); ?>
@@ -54,6 +55,10 @@ $account_requires_login = $view === 'account' && !is_user_logged_in();
 <?php endif; ?>
 <?php if ($account_requires_login) : ?>
     <div class="editor-content"><h1>Личный кабинет</h1><p>Войдите, чтобы открыть кабинет.</p><button type="button" class="plain-action" data-open="login">Войти</button></div>
+<?php elseif ($is_single_post) : ?>
+    <?php while (have_posts()) : the_post(); ?>
+        <?php get_template_part('views/single-post'); ?>
+    <?php endwhile; ?>
 <?php elseif ($view) : ?>
     <div class="scene-host"><?php require get_theme_file_path('/views/' . $view . '.php'); ?></div>
     <?php if ($view !== 'home' && is_page() && trim((string) get_post_field('post_content', get_queried_object_id()))) : ?>

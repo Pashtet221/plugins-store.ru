@@ -1,17 +1,5 @@
 <article id="n-275-173" class="scene n-275-173" ><div id="n-275-174" class="layer n-275-174 section backdrop-layer ornament" ></div>
-<header id="n-275-175" class="layer n-275-175 section site-header" ><a id="n-275-176" class="layer n-275-176 text site-brand" href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
-<button id="n-275-177" class="layer n-275-177 text" data-open="mega" type="button">Плагины</button>
-<a id="n-275-178" class="layer n-275-178 text" href="<?php echo esc_url(psv3_url('services')); ?>">Услуги</a>
-<a id="n-275-179" class="layer n-275-179 text" href="<?php echo esc_url(psv3_url('home')); ?>#n-240-134">Мини-кейсы</a>
-<a id="n-275-180" class="layer n-275-180 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Документация</a>
-<button id="n-275-181" class="layer n-275-181" data-open="profile-menu" type="button"><span id="n-275-182" class="layer n-275-182 text" >Вход в ЛК</span>
-</button>
-<div id="n-275-183" class="layer n-275-183" ><div id="n-275-184" class="layer n-275-184 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/275_184.png')); ?>" alt="" style="object-fit:fill"></div>
-</div>
-<a id="n-275-271" class="layer n-275-271 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
-<a id="n-277-179" class="layer n-277-179 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
-<?php get_template_part('views/mobile-nav-toggle'); ?>
-</header>
+<?php get_template_part('views/article-header'); ?>
 <a id="n-275-185" class="layer n-275-185 text section" href="<?php echo esc_url(psv3_url('home')); ?>">Главная</a>
 <a id="n-275-186" class="layer n-275-186 text section" href="<?php echo esc_url(psv3_url('blog')); ?>">/  Блог  /  Оформление заказа</a>
 <div id="n-275-187" class="layer n-275-187 section" ><a id="n-275-188" class="layer n-275-188 text" href="<?php echo esc_url(psv3_url('blog')); ?>">← Все статьи</a>
@@ -59,32 +47,5 @@
 <span id="n-275-230" class="layer n-275-230 text" >Что замедляет интернет-магазин</span>
 <span id="n-275-231" class="layer n-275-231 text" >С чего начать проверку темы, плагинов и внешних сервисов.</span>
 </div>
-<footer id="n-275-232" class="layer n-275-232 section site-footer" ><div id="n-275-233" class="layer n-275-233" ><div id="n-275-234" class="layer n-275-234" ><a id="n-275-235" class="layer n-275-235 text" href="<?php echo esc_url(psv3_url('home')); ?>">plugins.store</a>
-<span id="n-275-236" class="layer n-275-236 text" >Плагины и разработка
-для интернет-магазинов</span>
-</div>
-<div id="n-275-237" class="layer n-275-237" ><a id="n-275-238" class="layer n-275-238 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">Плагины</a>
-<a id="n-275-239" class="layer n-275-239 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WooCommerce</a>
-<a id="n-275-240" class="layer n-275-240 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">WordPress</a>
-<a id="n-275-241" class="layer n-275-241 text" href="<?php echo esc_url(psv3_url('plugins')); ?>">1С-Битрикс</a>
-</div>
-<div id="n-275-242" class="layer n-275-242" ><a id="n-275-243" class="layer n-275-243 text" href="<?php echo esc_url(psv3_url('services')); ?>">Услуги</a>
-<span id="n-275-244" class="layer n-275-244 text" >Разработка плагинов</span>
-<span id="n-275-245" class="layer n-275-245 text" >Доработка магазинов</span>
-<span id="n-275-246" class="layer n-275-246 text" >Техническая поддержка</span>
-</div>
-<div id="n-275-247" class="layer n-275-247" ><span id="n-275-248" class="layer n-275-248 text" >Помощь</span>
-<a id="n-275-249" class="layer n-275-249 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Документация</a>
-<a id="n-275-250" class="layer n-275-250 text" href="<?php echo esc_url(psv3_url('account')); ?>">Личный кабинет</a>
-<a id="n-275-251" class="layer n-275-251 text" href="<?php echo esc_url(psv3_telegram()); ?>">Telegram</a>
-</div>
-</div>
-<div id="n-275-252" class="layer n-275-252 ornament" ></div>
-<div id="n-275-253" class="layer n-275-253" ><span id="n-275-254" class="layer n-275-254 text" >© Plugins-store</span>
-<div id="n-275-255" class="layer n-275-255" ><a id="n-275-256" class="layer n-275-256 text" href="<?php echo esc_url(psv3_url('privacy')); ?>">Политика конфиденциальности</a>
-<a id="n-275-257" class="layer n-275-257 text" href="<?php echo esc_url(psv3_url('offer')); ?>">Публичная оферта</a>
-<a id="n-275-258" class="layer n-275-258 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Гарантии и возврат</a>
-</div>
-</div>
-</footer>
+<?php get_template_part('views/article-footer'); ?>
 </article>
