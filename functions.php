@@ -200,6 +200,26 @@ function psv3_notice(): void {
 }
 
 add_action('init', static function () {
+    register_post_type('wp-plugins', [
+        'labels' => [
+            'name' => 'Плагины',
+            'singular_name' => 'Плагин',
+            'menu_name' => 'Плагины магазина',
+            'all_items' => 'Все плагины',
+            'add_new_item' => 'Добавить плагин',
+            'edit_item' => 'Редактировать плагин',
+            'view_item' => 'Посмотреть плагин',
+            'search_items' => 'Найти плагин',
+            'not_found' => 'Плагины не найдены',
+        ],
+        'public' => true,
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-admin-plugins',
+        'has_archive' => false,
+        'rewrite' => false,
+        'supports' => ['title', 'editor', 'excerpt', 'thumbnail', 'revisions'],
+    ]);
+
     register_post_type('psv3_ticket', [
         'label' => 'Обращения Plugins-store', 'public' => false, 'show_ui' => true,
         'supports' => ['title', 'editor', 'author', 'custom-fields'],
