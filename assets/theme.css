@@ -703,3 +703,63 @@ html {
     .contact-max { top: 115px; }
     .contact-whatsapp { top: 154px; }
 }
+
+.scene-host > .scene > .section > a.layer.service-price-card {
+    transition: background-color 220ms ease, box-shadow 260ms ease, scale 260ms cubic-bezier(.2, .65, .35, 1);
+}
+.scene-host > .scene > .section > a.layer.service-price-card:focus-visible {
+    z-index: 1;
+    background: #343a40;
+    outline-color: #8decaa;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 22%);
+}
+@media (hover: hover) and (pointer: fine) {
+    .scene-host > .scene > .section > a.layer.service-price-card:hover {
+        z-index: 1;
+        background: #343a40;
+        filter: none;
+        box-shadow: 0 8px 24px rgb(0 0 0 / 22%);
+    }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .scene-host > .scene > .section > a.layer.service-price-card:hover { scale: 1.012; }
+}
+
+.scene .service-floating-field {
+    color: #191d20;
+    transition: background-color 200ms ease, box-shadow 200ms ease;
+}
+.scene .service-floating-field:focus-within {
+    background: #f7faf8;
+    box-shadow: inset 0 0 0 2px #21663c;
+}
+.scene .service-floating-field :is(input, textarea) {
+    display: block;
+    min-height: 56px;
+    padding: 22px 14px 7px;
+    font-size: 16px;
+}
+.scene .service-floating-field textarea { min-height: 124px; }
+.scene .service-floating-field :is(input, textarea):focus-visible { outline: none; }
+.service-floating-field label {
+    position: absolute;
+    top: 50%;
+    inset-inline-start: 14px;
+    color: #515d65;
+    font-size: 16px;
+    line-height: 1.25;
+    cursor: text;
+    transform: translateY(-50%);
+    transform-origin: left top;
+    transition: top 200ms ease, transform 200ms ease, color 200ms ease;
+}
+.service-floating-message label { top: 26px; }
+.service-floating-field :is(input, textarea):is(:focus, :not(:placeholder-shown)) + label {
+    top: 6px;
+    color: #21663c;
+    transform: scale(.75);
+}
+@media (prefers-reduced-motion: reduce) {
+    .scene-host > .scene > .section > a.layer.service-price-card,
+    .scene .service-floating-field, .service-floating-field label { transition: none; }
+}

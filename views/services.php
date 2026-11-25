@@ -75,14 +75,23 @@
 <span id="n-270-158" class="layer n-270-158 text" >Пришлите ссылку на магазин и расскажите, что нужно добавить или исправить.</span>
 <span id="n-270-159" class="layer n-270-159 text" >Можно начать с переписки
 в Telegram.</span>
-<form id="n-270-160" class="layer n-270-160 native-form" method="post" enctype="multipart/form-data" action="<?php echo esc_url(admin_url('admin-post.php')); ?>"><?php psv3_form_fields('request'); ?><span id="n-270-161" class="layer n-270-161 text" >Имя</span>
-<div id="n-270-162" class="layer n-270-162 field" ><input type="text" name="name" aria-label="Имя" placeholder="Как к вам обращаться"></div>
-<span id="n-270-164" class="layer n-270-164 text" >Email или Telegram</span>
-<div id="n-270-165" class="layer n-270-165 field" ><input type="text" name="contact" aria-label="Email или Telegram" placeholder="Куда вам ответить" required></div>
-<span id="n-270-167" class="layer n-270-167 text" >Сайт магазина</span>
-<div id="n-270-168" class="layer n-270-168 field" ><input type="url" name="website" aria-label="Сайт магазина" placeholder="https://"></div>
-<span id="n-270-170" class="layer n-270-170 text" >Что нужно сделать</span>
-<div id="n-270-171" class="layer n-270-171 field" ><textarea name="message" aria-label="Что нужно сделать" placeholder="Например, подключить склад к WooCommerce" required></textarea></div>
+<form id="n-270-160" class="layer n-270-160 native-form" method="post" enctype="multipart/form-data" action="<?php echo esc_url(admin_url('admin-post.php')); ?>"><?php psv3_form_fields('request'); ?>
+<div id="n-270-162" class="layer n-270-162 field service-floating-field">
+    <input id="service-name" type="text" name="name" placeholder=" " autocomplete="name">
+    <label for="service-name">Имя</label>
+</div>
+<div id="n-270-165" class="layer n-270-165 field service-floating-field">
+    <input id="service-contact" type="text" name="contact" placeholder=" " required>
+    <label for="service-contact">Email или Telegram</label>
+</div>
+<div id="n-270-168" class="layer n-270-168 field service-floating-field">
+    <input id="service-website" type="url" name="website" placeholder=" " autocomplete="url">
+    <label for="service-website">Сайт магазина</label>
+</div>
+<div id="n-270-171" class="layer n-270-171 field service-floating-field service-floating-message">
+    <textarea id="service-message" name="message" placeholder=" " required></textarea>
+    <label for="service-message">Что нужно сделать</label>
+</div>
 <span id="n-270-173" class="layer n-270-173 text" >Укажите желаемый срок, если он уже известен.</span>
 <button id="n-270-174" class="layer n-270-174" type="submit"><span id="n-270-175" class="layer n-270-175 text" >Отправить заявку →</span>
 </button>
