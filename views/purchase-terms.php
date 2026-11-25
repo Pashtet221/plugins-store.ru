@@ -1,16 +1,4 @@
-<article id="n-248-94" class="scene n-248-94" ><header id="n-248-95" class="layer n-248-95 section site-header" ><a id="n-248-96" class="layer n-248-96 text site-brand" href="<?php echo esc_url(psv3_url('home')); ?>"><?php get_template_part('views/site-logo'); ?></a>
-<button id="n-248-97" class="layer n-248-97 text" data-open="mega" type="button">Плагины</button>
-<a id="n-248-98" class="layer n-248-98 text" href="<?php echo esc_url(psv3_url('services')); ?>">Услуги</a>
-<a id="n-248-99" class="layer n-248-99 text" href="<?php echo esc_url(psv3_url('home')); ?>#n-240-134">Мини-кейсы</a>
-<a id="n-248-100" class="layer n-248-100 text" href="<?php echo esc_url(psv3_url('purchase-terms')); ?>">Документация</a>
-<button id="n-248-101" class="layer n-248-101" data-open="profile-menu" type="button"><span id="n-248-102" class="layer n-248-102 text" >Вход в ЛК</span>
-</button>
-<div id="n-248-103" class="layer n-248-103" ><div id="n-248-104" class="layer n-248-104 image-layer" ><img src="<?php echo esc_url(get_theme_file_uri('/assets/media/248_104.png')); ?>" alt="" style="object-fit:fill"></div>
-</div>
-<a id="n-275-261" class="layer n-275-261 text" href="<?php echo esc_url(psv3_url('blog')); ?>">Блог</a>
-<a id="n-277-169" class="layer n-277-169 text" href="<?php echo esc_url(psv3_url('contacts')); ?>">Контакты</a>
-<?php get_template_part('views/mobile-nav-toggle'); ?>
-</header>
+<article id="n-248-94" class="scene n-248-94" >
 <span id="n-248-105" class="layer n-248-105 text section" >Главная  /  Условия покупки</span>
 <div id="n-248-106" class="layer n-248-106 section" ><h1 id="n-248-107" class="layer n-248-107 text" >Гарантии, поддержка
 и возврат</h1>
